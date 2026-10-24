@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Awareness Training | CyberShield Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ========== PROGRESS BAR ========== -->
+    <div class="progress-bar-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="logo-icon">🛡️</span>
+                <span class="logo-text">CyberShield</span>
+            </div>
+            <button class="sidebar-close" id="sidebarClose" aria-label="Close navigation">✕</button>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#welcome" class="nav-link active" data-section="welcome"><span class="nav-num">01</span> Welcome</a></li>
+            <li><a href="#types" class="nav-link" data-section="types"><span class="nav-num">02</span> Types of Phishing</a></li>
+            <li><a href="#recognize" class="nav-link" data-section="recognize"><span class="nav-num">03</span> How to Recognize</a></li>
+            <li><a href="#examples" class="nav-link" data-section="examples"><span class="nav-num">04</span> Real-World Cases</a></li>
+            <li><a href="#social" class="nav-link" data-section="social"><span class="nav-num">05</span> Social Engineering</a></li>
+            <li><a href="#practices" class="nav-link" data-section="practices"><span class="nav-num">06</span> Best Practices</a></li>
+            <li><a href="#quiz" class="nav-link" data-section="quiz"><span class="nav-num">07</span> Quiz</a></li>
+            <li><a href="#certificate" class="nav-link" data-section="certificate"><span class="nav-num">08</span> Certificate</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <div class="progress-text">Progress: <span id="progressText">0%</span></div>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav Toggle -->
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
+        <span></span><span></span><span></span>
+    </button>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="main-content">
+
+        <!-- ===== SECTION 1: WELCOME ===== -->
+        <section class="section" id="welcome">
+            <div class="section-inner">
+                <div class="hero">
+                    <div class="hero-badge animate-on-scroll">CYBERSECURITY TRAINING MODULE</div>
+                    <h1 class="hero-title animate-on-scroll">
+                        <span class="glow-text">Phishing</span> Awareness Training
+                    </h1>
+                    <p class="hero-subtitle animate-on-scroll">
+                        Learn to identify, avoid, and report phishing attacks — your first line of defense in cybersecurity.
+                    </p>
+                    <div class="hero-stats animate-on-scroll">
+                        <div class="stat-card">
+                            <span class="stat-number">3.4B</span>
+                            <span class="stat-label">Phishing emails sent daily</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">36%</span>
+                            <span class="stat-label">of breaches involve phishing</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">$4.76M</span>
+                            <span class="stat-label">avg. cost of a phishing breach</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-block animate-on-scroll">
+                    <h2>What is Phishing?</h2>
+                    <p>
+                        <strong>Phishing</strong> is a type of cyberattack where criminals impersonate legitimate organizations, 
+                        colleagues, or trusted entities to trick individuals into revealing sensitive information — such as 
+                        passwords, credit card numbers, Social Security numbers, or corporate credentials.
+                    </p>
+                    <p>
+                        The term "phishing" is a play on "fishing" — attackers cast a wide net of deceptive messages, 
+                        hoping victims will "bite." These attacks typically arrive via email, but also use text messages, 
+                        phone calls, social media, and even fake websites.
+                    </p>
+                    <div class="info-callout">
+                        <div class="callout-icon">⚠️</div>
+                        <div class="callout-content">
+                            <strong>Why It Matters:</strong> According to the FBI's Internet Crime Complaint Center (IC3), 
+                            phishing was the most reported cybercrime in 2023, with over 298,000 complaints. The Anti-Phishing 
+                            Working Group (APWG) observed nearly 5 million phishing attacks in 2023 — the worst year on record.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-block animate-on-scroll">
+                    <h2>How Phishing Works</h2>
+                    <div class="process-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Reconnaissance</h4>
+                                <p>The attacker researches the target — gathering email addresses, job titles, interests, and organizational details from social media, company websites, and data breaches.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Crafting the Lure</h4>
+                                <p>A convincing message is created that mimics a trusted source — an email from IT, a shipping notification, a bank alert, or a message from a colleague. Attackers clone real templates and domains.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Delivery</h4>
+                                <p>The phishing message is sent to the target via email, SMS, social media, or other communication channels. Some attackers send millions of messages; others target a single person.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Exploitation</h4>
+                                <p>The victim clicks a malicious link, opens an infected attachment, or enters credentials on a fake website. Malware may be installed, or credentials are harvested in real time.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Data Exfiltration</h4>
+                                <p>The attacker uses stolen credentials or malware access to steal data, move laterally within the network, deploy ransomware, or commit financial fraud.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#types" class="next-section-btn animate-on-scroll">
+                    Continue to Types of Phishing →
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 2: TYPES OF PHISHING ===== -->
+        <section class="section" id="types">
+            <div class="section-inner">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-num">02</span>
+                    <h2 class="section-title">Types of Phishing Attacks</h2>
+                    <p class="section-desc">Phishing has evolved into many specialized forms, each exploiting different communication channels and trust relationships.</p>
+                </div>
+
+                <div class="types-grid">
+                    <div class="type-card animate-on-scroll">
+                        <div class="type-icon">📧</div>
+                        <h3>Email Phishing</h3>
+                        <p>
+                            The most common form. Attackers send mass emails impersonating banks, tech companies, 
+                            or government agencies. These emails contain urgent calls to action — "Your account has 
+                            been compromised!" — with links to fake login pages. Often uses spoofed sender addresses 
+                            and near-identical branding.
+                        </p>
+                        <div class="type-tag">Most Common</div>
+                    </div>
+
+                    <div class="type-card animate-on-scroll">
+                        <div class="type-icon">🎯</div>
+                        <h3>Spear Phishing</h3>
+                        <p>
+                            Highly targeted attacks directed at specific individuals or organizations. Attackers 
+                            research their victims thoroughly — using LinkedIn profiles, company org charts, and 
+                            social media — to craft personalized, believable messages. Far more dangerous than 
+                            mass phishing because of their convincing nature.
+                        </p>
+                        <div class="type-tag type-tag-danger">High Risk</div>
+                    </div>
+
+                    <div class="type-card animate-on-scroll">
+                        <div class="type-icon">🐋</div>
+                        <h3>Whaling</h3>
+                        <p>
+                            A sub-type of spear phishing targeting C-suite executives and senior leadership — 
+                            CEOs, CFOs, and board members. Whaling emails often appear to be legal subpoenas, 
+                            tax notices, or high-stakes business communications. A successful whaling attack can 
+                            compromise entire organizations.
+                        </p>
+                        <div class="type-tag type-tag-danger">Executive Target</div>
+                    </div>
+
+                    <div class="type-card animate-on-scroll">
+                        <div class="type-icon">📱</div>
+                        <h3>Smishing (SMS Phishing)</h3>
+                        <p>
+                            Phishing via text messages (SMS). Attackers send messages that appear to be from banks, 
+                            delivery services (FedEx, UPS), or government agencies like the IRS. These texts include 
+                            shortened URLs that redirect to credential-harvesting sites or trigger malware downloads.
+                        </p>
+                        <div class="type-tag type-tag-warning">Growing Threat</div>
+                    </div>
+
+                    <div class="type-card animate-on-scroll">
+                        <div class="type-icon">📞</div>
+                        <h3>Vishing (Voice Phishing)</h3>
+                        <p>
+                            Phone-based phishing where attackers call victims posing as bank representatives, 
+                            tech support agents, or law enforcement. AI-generated voice cloning has made vishing 
+                            far more convincing — attackers can now mimic the voice of a CEO or family member 
+                            using just a few seconds of sample audio.
+                        </p>
+                        <div class="type-tag type-tag-warning">AI-Enhanced</div>
+                    </div>
+
+                    <div class="type-card animate-on-scroll">
+                        <div class="type-icon">🌐</div>
+                        <h3>Clone Phishing</h3>
+                        <p>
+                            The attacker creates a near-identical copy of a legitimate email that the victim 
+                            previously received — replacing legitimate links or attachments with malicious ones. 
+                            Because the victim recognizes the email format, they're more likely to trust it. Often 
+                            claims to be a "resend" or "updated version."
+                        </p>
+                        <div class="type-tag">Deceptive</div>
+                    </div>
+
+                    <div class="type-card animate-on-scroll">
+                        <div class="type-icon">🔍</div>
+                        <h3>Search Engine Phishing</h3>
+                        <p>
+                            Attackers create fake websites optimized for search engines (SEO poisoning) or 
+                            purchase ads that appear above legitimate search results. Users searching for 
+                            banking sites, software downloads, or customer support are redirected to 
+                            convincing clones that harvest credentials.
+                        </p>
+                        <div class="type-tag">Emerging</div>
+                    </div>
+
+                    <div class="type-card animate-on-scroll">
+                        <div class="type-icon">💬</div>
+                        <h3>Angler Phishing</h3>
+                        <p>
+                            Attackers create fake customer service accounts on social media platforms (Twitter/X, 
+                            Facebook, Instagram) and intercept customer complaints directed at real companies. 
+                            They respond with malicious links disguised as "support pages" or ask victims to 
+                            provide account details via DM.
+                        </p>
+                        <div class="type-tag">Social Media</div>
+                    </div>
+                </div>
+
+                <a href="#recognize" class="next-section-btn animate-on-scroll">
+                    Continue to How to Recognize Phishing →
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 3: HOW TO RECOGNIZE PHISHING ===== -->
+        <section class="section" id="recognize">
+            <div class="section-inner">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-num">03</span>
+                    <h2 class="section-title">How to Recognize Phishing</h2>
+                    <p class="section-desc">Learn the red flags that reveal a phishing attempt — even the most convincing ones.</p>
+                </div>
+
+                <div class="recognize-container">
+                    <!-- Simulated Phishing Email -->
+                    <div class="email-example animate-on-scroll">
+                        <div class="email-header">
+                            <div class="email-meta">
+                                <div class="email-from">
+                                    <strong>From:</strong> security-alert@amaz0n-verify.com
+                                    <span class="red-flag-marker" data-tooltip="Spoofed domain — 'amaz0n' uses a zero instead of 'o', and the domain isn't amazon.com">🚩</span>
+                                </div>
+                                <div class="email-to"><strong>To:</strong> you@yourcompany.com</div>
+                                <div class="email-subject">
+                                    <strong>Subject:</strong> ⚠️ URGENT: Your Account Will Be Suspended in 24 Hours!
+                                    <span class="red-flag-marker" data-tooltip="Creates artificial urgency to pressure you into acting without thinking">🚩</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="email-body">
+                            <p>Dear Valued Costumer,
+                                <span class="red-flag-marker" data-tooltip="Spelling error: 'Costumer' instead of 'Customer' — legitimate companies proofread">🚩</span>
+                            </p>
+                            <p>We have detected unusual activity on your Amazon account. Your account will be 
+                            permanently suspended unless you verify your identity within 24 hours.</p>
+                            <p>Please click the link below to confirm your account information:</p>
+                            <p class="phishing-link">
+                                <a href="javascript:void(0)" onclick="event.preventDefault()">https://amaz0n-verify.com/secure/login
+                                    <span class="red-flag-marker" data-tooltip="Fake URL — legitimate Amazon links use amazon.com, not 'amaz0n-verify.com'">🚩</span>
+                                </a>
+                            </p>
+                            <p>If you do not verify within 24 hours, your account and all associated data will be 
+                            permanently deleted.
+                                <span class="red-flag-marker" data-tooltip="Threatening language designed to create fear and bypass critical thinking">🚩</span>
+                            </p>
+                            <p>Thank you,<br>Amazon Security Team</p>
+                        </div>
+                        <div class="email-label">⬆️ Hover over 🚩 flags to see what's wrong</div>
+                    </div>
+
+                    <!-- Red Flags Checklist -->
+                    <div class="checklist animate-on-scroll">
+                        <h3>🚩 Phishing Red Flags Checklist</h3>
+                        <div class="checklist-items">
+                            <div class="checklist-item">
+                                <span class="check-icon">⊘</span>
+                                <div>
+                                    <strong>Suspicious sender address</strong>
+                                    <p>Check the actual email address, not just the display name. Look for misspelled domains, extra characters, or domains that don't match the company (e.g., @amaz0n-verify.com vs @amazon.com).</p>
+                                </div>
+                            </div>
+                            <div class="checklist-item">
+                                <span class="check-icon">⊘</span>
+                                <div>
+                                    <strong>Urgency and pressure tactics</strong>
+                                    <p>Phrases like "Act immediately," "Your account will be suspended," or "You have 24 hours" are designed to override your critical thinking. Legitimate companies rarely impose immediate deadlines via email.</p>
+                                </div>
+                            </div>
+                            <div class="checklist-item">
+                                <span class="check-icon">⊘</span>
+                                <div>
+                                    <strong>Generic greetings</strong>
+                                    <p>"Dear Customer" or "Dear User" instead of your actual name. Companies you do business with typically know your name and use it in communications.</p>
+                                </div>
+                            </div>
+                            <div class="checklist-item">
+                                <span class="check-icon">⊘</span>
+                                <div>
+                                    <strong>Spelling and grammar errors</strong>
+                                    <p>Professional organizations have editorial standards. Multiple typos, awkward phrasing, or obvious grammatical mistakes are strong indicators of phishing — though AI-generated phishing is reducing this signal.</p>
+                                </div>
+                            </div>
+                            <div class="checklist-item">
+                                <span class="check-icon">⊘</span>
+                                <div>
+                                    <strong>Suspicious links and URLs</strong>
+                                    <p>Hover over links before clicking. Check for misspelled domains, unusual subdomains (e.g., amazon.evil-site.com), or URLs that use URL shorteners to hide the destination.</p>
+                                </div>
+                            </div>
+                            <div class="checklist-item">
+                                <span class="check-icon">⊘</span>
+                                <div>
+                                    <strong>Unexpected attachments</strong>
+                                    <p>Be cautious of .exe, .zip, .docm, .xlsm, or .js files. Even PDFs and Office documents can contain malicious macros or embedded links. Never open attachments you didn't expect.</p>
+                                </div>
+                            </div>
+                            <div class="checklist-item">
+                                <span class="check-icon">⊘</span>
+                                <div>
+                                    <strong>Requests for sensitive information</strong>
+                                    <p>Legitimate organizations never ask for passwords, Social Security numbers, or full credit card details via email. If in doubt, contact the organization directly through their official website or phone number.</p>
+                                </div>
+                            </div>
+                            <div class="checklist-item">
+                                <span class="check-icon">⊘</span>
+                                <div>
+                                    <strong>Too-good-to-be-true offers</strong>
+                                    <p>"You've won a $1,000 gift card!" or "Congratulations on your lottery prize!" If you didn't enter a contest, you didn't win. These offers are bait.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#examples" class="next-section-btn animate-on-scroll">
+                    Continue to Real-World Examples →
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 4: REAL-WORLD EXAMPLES ===== -->
+        <section class="section" id="examples">
+            <div class="section-inner">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-num">04</span>
+                    <h2 class="section-title">Real-World Phishing Case Studies</h2>
+                    <p class="section-desc">These major incidents prove that phishing can compromise anyone — from tech giants to government agencies.</p>
+                </div>
+
+                <div class="case-studies">
+                    <!-- Case Study 1 -->
+                    <div class="case-card animate-on-scroll">
+                        <div class="case-header">
+                            <div class="case-year">2013–2015</div>
+                            <h3>Google & Facebook Invoice Scam</h3>
+                            <div class="case-impact impact-critical">Loss: $121 Million</div>
+                        </div>
+                        <div class="case-body">
+                            <p>
+                                Lithuanian national Evaldas Rimasauskas orchestrated one of the largest phishing scams 
+                                in history. He impersonated Quanta Computer, a real Taiwanese hardware manufacturer 
+                                that does business with both Google and Facebook.
+                            </p>
+                            <div class="case-details">
+                                <div class="detail-item">
+                                    <strong>Method:</strong> Rimasauskas created a fake company with the same name as 
+                                    Quanta Computer, opened bank accounts in its name in Latvia and Cyprus, and sent 
+                                    fraudulent invoices with forged contracts and letters to Google and Facebook's 
+                                    accounting departments over two years.
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Impact:</strong> Google paid approximately $23 million and Facebook paid 
+                                    approximately $98 million before the scheme was uncovered. Both companies eventually 
+                                    recovered most of the funds.
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Lesson:</strong> Even the most sophisticated tech companies are vulnerable 
+                                    to business email compromise (BEC). Always verify payment requests through a secondary 
+                                    channel — especially for large amounts.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 2 -->
+                    <div class="case-card animate-on-scroll">
+                        <div class="case-header">
+                            <div class="case-year">2014</div>
+                            <h3>Sony Pictures Hack</h3>
+                            <div class="case-impact impact-critical">Devastating Data Breach</div>
+                        </div>
+                        <div class="case-body">
+                            <p>
+                                In November 2014, a group identifying itself as "Guardians of Peace" (GOP) — later 
+                                attributed to North Korea's Lazarus Group — launched a devastating cyberattack 
+                                against Sony Pictures Entertainment.
+                            </p>
+                            <div class="case-details">
+                                <div class="detail-item">
+                                    <strong>Method:</strong> The attackers used spear-phishing emails sent to Sony 
+                                    employees, disguised as messages from Apple regarding Apple ID verification. 
+                                    These emails contained links to a fake website that harvested employee credentials, 
+                                    giving the attackers access to Sony's internal network.
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Impact:</strong> Over 100 terabytes of data were stolen, including unreleased 
+                                    films, employee Social Security numbers, salary data, private emails between executives, 
+                                    and sensitive business plans. The leaked emails caused massive reputational damage. 
+                                    Estimated cost: over $100 million.
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Lesson:</strong> A single employee clicking a phishing link can compromise 
+                                    an entire organization. Comprehensive security awareness training and network 
+                                    segmentation are essential defenses.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 3 -->
+                    <div class="case-card animate-on-scroll">
+                        <div class="case-header">
+                            <div class="case-year">2020</div>
+                            <h3>Twitter Bitcoin Scam</h3>
+                            <div class="case-impact impact-high">High-Profile Account Hijacking</div>
+                        </div>
+                        <div class="case-body">
+                            <p>
+                                On July 15, 2020, the Twitter accounts of Barack Obama, Joe Biden, Elon Musk, 
+                                Bill Gates, Apple, Uber, and other high-profile entities were simultaneously 
+                                hijacked to promote a Bitcoin scam.
+                            </p>
+                            <div class="case-details">
+                                <div class="detail-item">
+                                    <strong>Method:</strong> A 17-year-old hacker and accomplices used phone-based 
+                                    spear-phishing (vishing) to target Twitter employees. They called employees posing 
+                                    as IT staff, directing them to a fake internal VPN login page. Once they obtained 
+                                    employee credentials, they accessed Twitter's internal admin tools to take over 
+                                    verified accounts.
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Impact:</strong> The scam collected approximately $120,000 in Bitcoin. 
+                                    More critically, it exposed a massive security vulnerability at one of the world's 
+                                    most influential social media platforms. Twitter's stock dropped, and the company 
+                                    faced intense regulatory scrutiny.
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Lesson:</strong> Internal tools must be protected with multi-factor 
+                                    authentication and zero-trust architecture. Phone-based social engineering 
+                                    (vishing) is a serious and often underestimated threat vector.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 4 -->
+                    <div class="case-card animate-on-scroll">
+                        <div class="case-header">
+                            <div class="case-year">2016</div>
+                            <h3>Democratic National Committee (DNC) Breach</h3>
+                            <div class="case-impact impact-critical">Geopolitical Impact</div>
+                        </div>
+                        <div class="case-body">
+                            <p>
+                                Russian intelligence operatives (APT28/Fancy Bear) targeted the DNC and Clinton 
+                                campaign chairman John Podesta's email account during the 2016 U.S. presidential election.
+                            </p>
+                            <div class="case-details">
+                                <div class="detail-item">
+                                    <strong>Method:</strong> Podesta received a spear-phishing email disguised as a 
+                                    Google security alert warning him that someone had tried to access his account. 
+                                    The email contained a "Change Password" link that led to a fake Google login page. 
+                                    An IT aide who reviewed the email mistakenly told Podesta it was "a legitimate email" 
+                                    (later claiming he had meant to write "illegitimate").
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Impact:</strong> Over 50,000 emails from Podesta's account were stolen and 
+                                    published by WikiLeaks. The breach had significant implications for the 2016 U.S. 
+                                    presidential election and U.S.-Russia relations.
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Lesson:</strong> Even a single misinterpreted advisory can lead to catastrophic 
+                                    results. Organizations must establish clear, verified procedures for handling potential 
+                                    phishing reports. Never click links in security alerts — go directly to the service.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#social" class="next-section-btn animate-on-scroll">
+                    Continue to Social Engineering Tactics →
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 5: SOCIAL ENGINEERING TACTICS ===== -->
+        <section class="section" id="social">
+            <div class="section-inner">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-num">05</span>
+                    <h2 class="section-title">Social Engineering Tactics</h2>
+                    <p class="section-desc">Phishing exploits human psychology, not just technology. Understanding these psychological manipulation techniques is critical to defending against them.</p>
+                </div>
+
+                <div class="tactics-grid">
+                    <div class="tactic-card animate-on-scroll">
+                        <div class="tactic-header">
+                            <div class="tactic-icon">⏰</div>
+                            <h3>Urgency & Scarcity</h3>
+                        </div>
+                        <p>
+                            Attackers create artificial time pressure to force hasty decisions. Messages like 
+                            "Your account will be locked in 1 hour" or "Only 2 spots left — claim your reward now!" 
+                            exploit the psychological principle that people make worse decisions under time pressure.
+                        </p>
+                        <div class="tactic-example">
+                            <strong>Example:</strong> "FINAL WARNING: Your PayPal account has been limited. 
+                            Restore access within 24 hours or your funds will be frozen permanently."
+                        </div>
+                        <div class="tactic-defense">
+                            <strong>Defense:</strong> Pause and take a breath. Legitimate organizations give reasonable 
+                            timeframes and don't threaten permanent consequences via email. Verify through official channels.
+                        </div>
+                    </div>
+
+                    <div class="tactic-card animate-on-scroll">
+                        <div class="tactic-header">
+                            <div class="tactic-icon">👔</div>
+                            <h3>Authority</h3>
+                        </div>
+                        <p>
+                            People tend to comply with requests from perceived authority figures without questioning them. 
+                            Phishers impersonate CEOs, government officials, IT administrators, or law enforcement to 
+                            leverage this built-in compliance tendency.
+                        </p>
+                        <div class="tactic-example">
+                            <strong>Example:</strong> "Hi, this is the CEO. I'm in a meeting and need you to process 
+                            a wire transfer of $45,000 to this account urgently. Don't discuss this with anyone — 
+                            it's confidential."
+                        </div>
+                        <div class="tactic-defense">
+                            <strong>Defense:</strong> Always verify unusual requests through a separate communication channel. 
+                            Call the person directly using a known phone number — not one provided in the email.
+                        </div>
+                    </div>
+
+                    <div class="tactic-card animate-on-scroll">
+                        <div class="tactic-header">
+                            <div class="tactic-icon">😨</div>
+                            <h3>Fear & Intimidation</h3>
+                        </div>
+                        <p>
+                            Fear shuts down rational thinking. Phishers threaten account closure, legal action, 
+                            arrest, or financial penalties to trigger a fear response that overrides critical 
+                            evaluation of the message.
+                        </p>
+                        <div class="tactic-example">
+                            <strong>Example:</strong> "The IRS has identified a discrepancy in your tax return. 
+                            Failure to respond within 48 hours will result in legal proceedings and potential arrest."
+                        </div>
+                        <div class="tactic-defense">
+                            <strong>Defense:</strong> Remember that the IRS, law enforcement, and courts communicate 
+                            via official mail — not email or text. Any message threatening immediate arrest is almost 
+                            certainly a scam.
+                        </div>
+                    </div>
+
+                    <div class="tactic-card animate-on-scroll">
+                        <div class="tactic-header">
+                            <div class="tactic-icon">🤔</div>
+                            <h3>Curiosity</h3>
+                        </div>
+                        <p>
+                            Humans are naturally curious, and attackers exploit this by sending intriguing or 
+                            mysterious messages. Subject lines like "You won't believe what your coworker said about you" 
+                            or "Photos from last night's event" are designed to compel clicks.
+                        </p>
+                        <div class="tactic-example">
+                            <strong>Example:</strong> "Someone shared a document with you: 'Q4 Salary Adjustments - 
+                            Confidential.' Click here to view."
+                        </div>
+                        <div class="tactic-defense">
+                            <strong>Defense:</strong> If you didn't expect a document or message, verify with the 
+                            supposed sender through a separate channel before clicking any links.
+                        </div>
+                    </div>
+
+                    <div class="tactic-card animate-on-scroll">
+                        <div class="tactic-header">
+                            <div class="tactic-icon">🤝</div>
+                            <h3>Trust & Familiarity</h3>
+                        </div>
+                        <p>
+                            Attackers exploit existing trust relationships by compromising a colleague's email account 
+                            and using it to send phishing messages to their contacts. Since the email comes from a 
+                            known, trusted address, victims are far less likely to question it.
+                        </p>
+                        <div class="tactic-example">
+                            <strong>Example:</strong> An email from your actual manager's compromised account: 
+                            "Hey, can you review this invoice and process the payment? I'm out of office but 
+                            it's urgent. Thanks!"
+                        </div>
+                        <div class="tactic-defense">
+                            <strong>Defense:</strong> Be suspicious of any unexpected request involving money, 
+                            credentials, or sensitive data — even from known contacts. Verify verbally.
+                        </div>
+                    </div>
+
+                    <div class="tactic-card animate-on-scroll">
+                        <div class="tactic-header">
+                            <div class="tactic-icon">🎁</div>
+                            <h3>Reciprocity & Reward</h3>
+                        </div>
+                        <p>
+                            People feel obligated to reciprocate when they receive something — even something small. 
+                            Phishers offer free gift cards, discounts, or "exclusive" access to create a sense of 
+                            obligation that motivates the victim to comply with requests.
+                        </p>
+                        <div class="tactic-example">
+                            <strong>Example:</strong> "Congratulations! As a valued customer, you've been selected 
+                            for a $500 Amazon gift card. Claim your reward by verifying your account details here."
+                        </div>
+                        <div class="tactic-defense">
+                            <strong>Defense:</strong> If you didn't enter a contest or promotion, you didn't win anything. 
+                            Free offers that require personal information are almost always scams.
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#practices" class="next-section-btn animate-on-scroll">
+                    Continue to Best Practices →
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 6: BEST PRACTICES ===== -->
+        <section class="section" id="practices">
+            <div class="section-inner">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-num">06</span>
+                    <h2 class="section-title">Best Practices: Do's and Don'ts</h2>
+                    <p class="section-desc">Follow these guidelines to protect yourself and your organization from phishing attacks.</p>
+                </div>
+
+                <div class="practices-container">
+                    <!-- DO's -->
+                    <div class="practice-column animate-on-scroll">
+                        <div class="practice-header do-header">
+                            <span class="practice-icon">✅</span>
+                            <h3>DO</h3>
+                        </div>
+                        <div class="practice-cards">
+                            <div class="practice-card do-card">
+                                <h4>Verify the Sender</h4>
+                                <p>Always check the full email address — not just the display name. Contact the sender through a known, separate channel if anything seems unusual.</p>
+                            </div>
+                            <div class="practice-card do-card">
+                                <h4>Hover Before You Click</h4>
+                                <p>On desktop, hover your cursor over links to preview the actual URL. On mobile, long-press links. Ensure the domain matches the expected organization.</p>
+                            </div>
+                            <div class="practice-card do-card">
+                                <h4>Enable Multi-Factor Authentication (MFA)</h4>
+                                <p>Use MFA on all accounts — especially email, banking, and work accounts. Even if credentials are stolen, MFA provides a critical second layer of defense.</p>
+                            </div>
+                            <div class="practice-card do-card">
+                                <h4>Report Suspicious Emails</h4>
+                                <p>Use your organization's phishing report button or forward suspicious emails to your IT/security team. Reporting helps protect the entire organization.</p>
+                            </div>
+                            <div class="practice-card do-card">
+                                <h4>Keep Software Updated</h4>
+                                <p>Install security updates promptly. Patches fix vulnerabilities that phishing payloads exploit. Enable automatic updates where possible.</p>
+                            </div>
+                            <div class="practice-card do-card">
+                                <h4>Use a Password Manager</h4>
+                                <p>Password managers generate unique, strong passwords for every account and won't auto-fill on fake websites — providing an extra layer of phishing detection.</p>
+                            </div>
+                            <div class="practice-card do-card">
+                                <h4>Go Direct to Websites</h4>
+                                <p>Instead of clicking links in emails, open a new browser tab and type the organization's URL directly or use a saved bookmark.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DON'Ts -->
+                    <div class="practice-column animate-on-scroll">
+                        <div class="practice-header dont-header">
+                            <span class="practice-icon">❌</span>
+                            <h3>DON'T</h3>
+                        </div>
+                        <div class="practice-cards">
+                            <div class="practice-card dont-card">
+                                <h4>Click Links in Unexpected Emails</h4>
+                                <p>Never click links in emails you didn't expect — even if they appear to come from trusted senders. Accounts can be compromised and used to send phishing.</p>
+                            </div>
+                            <div class="practice-card dont-card">
+                                <h4>Open Unknown Attachments</h4>
+                                <p>Never open attachments from unknown senders, or unexpected attachments from known senders. Malware is commonly delivered via Word docs, PDFs, and ZIP files.</p>
+                            </div>
+                            <div class="practice-card dont-card">
+                                <h4>Share Passwords or Sensitive Data via Email</h4>
+                                <p>No legitimate organization will ever ask for your password, Social Security number, or full credit card number via email, text, or phone.</p>
+                            </div>
+                            <div class="practice-card dont-card">
+                                <h4>Trust Display Names Alone</h4>
+                                <p>Email display names can be set to anything — "Google Support" can mask the address phisher@evil.com. Always check the actual email address.</p>
+                            </div>
+                            <div class="practice-card dont-card">
+                                <h4>Use the Same Password Everywhere</h4>
+                                <p>If one account is compromised, attackers will try that password on every other service (credential stuffing). Use unique passwords for every account.</p>
+                            </div>
+                            <div class="practice-card dont-card">
+                                <h4>Respond to Unsolicited Requests</h4>
+                                <p>Don't reply to unexpected emails asking you to verify account details, update payment information, or confirm personal data. Go to the official website instead.</p>
+                            </div>
+                            <div class="practice-card dont-card">
+                                <h4>Ignore Red Flags</h4>
+                                <p>Trust your instincts. If something feels off — unusual tone, unexpected urgency, or a too-good-to-be-true offer — it probably is. When in doubt, report it.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#quiz" class="next-section-btn animate-on-scroll">
+                    Continue to Quiz →
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 7: QUIZ ===== -->
+        <section class="section" id="quiz">
+            <div class="section-inner">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-num">07</span>
+                    <h2 class="section-title">Knowledge Assessment Quiz</h2>
+                    <p class="section-desc">Test your phishing awareness. You need at least 70% (7/10 correct) to earn your Certificate of Completion.</p>
+                </div>
+
+                <div class="quiz-container" id="quizContainer">
+                    <!-- Quiz questions will be injected by JavaScript -->
+                    <div class="quiz-progress animate-on-scroll">
+                        <div class="quiz-progress-bar">
+                            <div class="quiz-progress-fill" id="quizProgressFill"></div>
+                        </div>
+                        <span class="quiz-progress-text" id="quizProgressText">Question 1 of 10</span>
+                    </div>
+
+                    <div class="quiz-question-area" id="quizQuestionArea">
+                        <!-- Dynamic content -->
+                    </div>
+
+                    <div class="quiz-controls">
+                        <button class="btn btn-secondary" id="quizPrev" disabled>← Previous</button>
+                        <button class="btn btn-primary" id="quizNext">Next →</button>
+                        <button class="btn btn-accent" id="quizSubmit" style="display:none;">Submit Quiz</button>
+                    </div>
+
+                    <!-- Results -->
+                    <div class="quiz-results" id="quizResults" style="display:none;">
+                        <div class="results-header" id="resultsHeader"></div>
+                        <div class="results-score" id="resultsScore"></div>
+                        <div class="results-breakdown" id="resultsBreakdown"></div>
+                        <div class="results-actions">
+                            <button class="btn btn-secondary" id="retakeBtn">Retake Quiz</button>
+                            <button class="btn btn-accent" id="viewCertBtn" style="display:none;">
+                                View Certificate →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 8: CERTIFICATE ===== -->
+        <section class="section" id="certificate">
+            <div class="section-inner">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-num">08</span>
+                    <h2 class="section-title">Certificate of Completion</h2>
+                    <p class="section-desc">Complete the quiz with a passing score to unlock your certificate.</p>
+                </div>
+
+                <div class="certificate-area" id="certificateArea">
+                    <!-- Locked state -->
+                    <div class="certificate-locked" id="certLocked">
+                        <div class="lock-icon">🔒</div>
+                        <h3>Certificate Locked</h3>
+                        <p>Complete the quiz with a score of 70% or higher to earn your Phishing Awareness Training Certificate.</p>
+                        <a href="#quiz" class="btn btn-primary">Take the Quiz</a>
+                    </div>
+
+                    <!-- Unlocked Certificate -->
+                    <div class="certificate-card" id="certUnlocked" style="display:none;">
+                        <div class="cert-border">
+                            <div class="cert-inner">
+                                <div class="cert-seal">🛡️</div>
+                                <div class="cert-header">
+                                    <div class="cert-org">CyberShield Academy</div>
+                                    <h2 class="cert-title">Certificate of Completion</h2>
+                                </div>
+                                <div class="cert-body">
+                                    <p class="cert-text">This certifies that</p>
+                                    <div class="cert-name" id="certName">—</div>
+                                    <p class="cert-text">has successfully completed the</p>
+                                    <div class="cert-course">Phishing Awareness Training Program</div>
+                                    <p class="cert-text">with a score of <span class="cert-score" id="certScore">—</span></p>
+                                </div>
+                                <div class="cert-footer">
+                                    <div class="cert-date">
+                                        <div class="cert-line"></div>
+                                        <span>Date: <span id="certDate">—</span></span>
+                                    </div>
+                                    <div class="cert-id">
+                                        <div class="cert-line"></div>
+                                        <span>Certificate ID: <span id="certId">—</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cert-actions">
+                            <button class="btn btn-primary" id="printCertBtn">🖨️ Print Certificate</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Name input modal for certificate -->
+                <div class="modal-overlay" id="nameModal" style="display:none;">
+                    <div class="modal-content">
+                        <h3>Enter Your Name</h3>
+                        <p>This name will appear on your certificate.</p>
+                        <input type="text" id="nameInput" class="modal-input" placeholder="Your full name" maxlength="60">
+                        <div class="modal-actions">
+                            <button class="btn btn-primary" id="nameSubmitBtn">Generate Certificate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 CyberShield Academy — Phishing Awareness Training</p>
+            <p class="footer-sub">Built for CodeAlpha Cyber Security Internship</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
